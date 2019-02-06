@@ -1,0 +1,22 @@
+<div class="row">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Shorthand</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let language of languages"
+        class="pointer"
+        (click)="goToItem($event, language.id)"
+      >
+        <td>{{ language.id }}</td>
+        <td>{{ language.name }}</td>
+        <td>{{ language.shorthand }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
